@@ -1,0 +1,52 @@
+.form-cntr {
+	.input-grp {
+		margin-bottom: 30px;
+		.select-area {
+			position: relative;
+			@include select_before($theme-color, 50px, 100%, 0, 0);
+			@include select_after(10px, 36%, 20px, #ffffff, 2px, 45deg);
+			select {
+				@include select_tag(100%, block, 10px 20px, 1em, 500, dimgray);
+			}
+		}
+		.input-area {
+			.input {
+				display: block;
+				width: 100%;
+				padding: 10px 20px;
+			}
+		}
+		.checkbox-area {
+			label {
+				position: relative;
+				cursor: pointer;
+				@include checkbox_before(20px, 2px solid $theme-color);
+				@include checkbox_after(-1px, 5px,11px, 7px, 2px, $theme-color, -45deg);
+			}
+			input[type="checkbox"] {
+				@include checkbox_tag(#000000, 1px );
+			}
+		}
+		.radiobox-area {
+			label {
+				position: relative;
+				cursor: pointer;
+				@include checkbox_before(20px, 2px solid $theme-color);
+				// override
+				&:before {
+					border-radius: 20em;
+				}
+				@include checkbox_after(0px, 6px,0, 7px, 2px, $theme-color, -45deg);
+				// override
+				&:after {
+					padding: 3px;
+					background-color: $theme-color;
+					border-radius: 20em;
+				}
+			}
+			input[type="radio"] {
+				@include checkbox_tag(#000000, 1px );
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+.link_page .link_con ul li{
+    font-family: Noto Sans CJK JP,sans-serif;
+}
+.link_page .link_con ul li a i{
+    right:18px;
+}
+.zaik_box2 ul li a{
+    padding-left: 18px;
+}
+.zaik_box i.material-icons{
+    padding-right: 11px;
+}
+.h2_zaik_title{
+    letter-spacing: 3px;
+}
+.h3_zaik_title{
+    letter-spacing:2px;
+}
+
+@include mq(max, 375){
+    .h2_zaik_title{
+        margin-bottom: 24px;
+    }
+}
+
+

@@ -1,0 +1,68 @@
+.clearfix{
+	clear: both; 
+	overflow: hidden;
+	&:before, &:after {
+		content:"";
+		display: table; 
+		clear: both; 
+	}
+}
+.v-sp{
+	display: block !important;
+	@include mq(min, $mq_md){
+		display: none !important;
+	}
+}
+.v-pc{
+	display: none !important;
+	@include mq(min, $mq_md){
+		display: block !important;
+	}
+}
+.MacOS.safari{
+	.mnav_double{
+		top: 40%;
+	}
+	.side_title{
+		width: 150px !important;
+		@include mq(max, 768) {
+			right: 0 !important;
+			top:150px !important;
+			width: 100px !important;
+			&.sha{
+				top:120px !important;
+			}
+			&.kaigo{
+				top:130px !important;
+			}
+		}
+		span{
+			padding: 9px 15px 9px 0 !important;
+		}
+	}
+	.stud-dept,.stud-name{
+		padding: 6px 10px 0;
+	}
+}
+.MacOS.Chrome, .MacOS.Firefox{
+	.side_title{
+		span{
+			padding-right: 5px !important;
+		}
+	}
+}
+.Internet{
+	.stud-dept,.stud-name{
+		padding: 6px 10px !important;
+	}
+	.rob-car-flow-text{
+		padding: 12px 7px 12px !important;
+	}
+	.rob-title-lline{
+		padding-top: 8px;
+	}
+	.child-nav .child-nav-item .child-nav-cntr .title-i.gtopNav-all .circle-bg{
+		position: relative;
+		top: -6px;
+	}
+}

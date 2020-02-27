@@ -1,0 +1,256 @@
+/////////
+// Fonts
+/////////
+@font-face {
+    font-family: 'ITC Century Std';
+    src: url('fonts/CenturyStd-Book.woff2') format('woff2'),
+        url('fonts/CenturyStd-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Variane Script';
+    src: url('fonts/VarianeScript.woff2') format('woff2'),
+        url('fonts/VarianeScript.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TuesdayNight';
+    src: url('fonts/TuesdayNight-Regular.woff'); /* IE9 Compat Modes */
+    src: url('fonts/TuesdayNight-Regular.woff?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('fonts/TuesdayNight-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+    url('fonts/TuesdayNight-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+// Yu mincho
+ @font-face {
+    font-family: 'Yumincho', serif;
+    src: url('fonts/YuMincho-Regular.woff2') format('woff2'),
+        url('fonts/YuMincho-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yumincho', serif;
+    src: url('fonts/YuMincho-Light.woff2') format('woff2'),
+        url('fonts/YuMincho-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yumincho', serif;
+    src: url('fonts/YuMincho-Demibold.woff2') format('woff2'),
+        url('fonts/YuMincho-Demibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+// NotoSansCJKjp
+ @font-face {
+    font-family: 'NotoSansCJKjp';
+    src: url('fonts/NotoSansCJKjp-Regular-Alphabetic.woff2') format('woff2'),
+        url('fonts/NotoSansCJKjp-Regular-Alphabetic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NotoSansCJKjp';
+    src: url('fonts/NotoSansCJKjp-Medium-Alphabetic.woff2') format('woff2'),
+        url('fonts/NotoSansCJKjp-Medium-Alphabetic.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NotoSansCJKjp';
+    src: url('fonts/NotoSansCJKjp-Bold-Alphabetic.woff2') format('woff2'),
+        url('fonts/NotoSansCJKjp-Bold-Alphabetic.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NotoSansCJKjp';
+    src: url('fonts/NotoSansCJKjp-Light-Alphabetic.woff2') format('woff2'),
+        url('fonts/NotoSansCJKjp-Light-Alphabetic.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NotoSansCJKjp-DemiLight-Alphabetic';
+    src: url('fonts/NotoSansCJKjp-DemiLight-Alphabetic.woff2') format('woff2'),
+        url('fonts/NotoSansCJKjp-DemiLight-Alphabetic.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    src: url('fonts/MaterialIcons-Regular.woff2') format('woff2'),
+        url('fonts/MaterialIcons-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Eisley Claise';
+    src: url('fonts/EisleyClaise.woff2') format('woff2'),
+        url('fonts/EisleyClaise.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Shigoto';
+    src: url('fonts/ShigotoMemogaki.woff2') format('woff2'),
+        url('fonts/ShigotoMemogaki.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+$base-font-family: "Noto Sans JP", sans-serif;
+$base-font-size: 16;
+$base-font-weight: 500;
+$base-line-height: 1.5;
+$base-color: #414042;
+$base-bg: #fff;
+$minHeight: calc(100vh);
+
+//////////////
+// FONT SIZES
+//////////////
+
+// FS OPTION (em,px)
+$default-fs-option: 'px';
+
+$font-sizes-xs: 18;
+$font-sizes: 20;
+
+// text logo max size
+$logo_ts: 32;
+
+//////////////
+// FONT WEIGHTS
+//////////////
+
+$font-weights: 500 600 900;
+
+//////////
+// Colors
+//////////
+
+$primary-color: rgb(175, 175, 202);
+$secondary-color: rgb(153, 17, 17);
+$theme-color: #FF8282;
+$other-theme-color: #FF4F4F;
+
+//////////////
+// Containers
+//////////////
+
+$default-containersm: 640;
+$default-container: 1280;
+$default-container2: 1320;
+$default-container3: 1480;
+$default-containerlg: 1640;
+$mq_sm: 460;
+$mq_md: 561;
+$mq_lg: 1640;
+
+//////////////
+// Padding left & right
+//////////////
+
+$default-pl: 20;
+
+//////////
+// MARGINS
+//////////
+
+// Margin TOP XS
+$margin-top: 0;
+// Margin TOP MD
+$margin-top-md: 0;
+// Margin BOTTOM XS
+$margin-bottom: 0 30;
+// Margin BOTTOM MD
+$margin-bottom-md: 0 10;
+
+// global margin top
+$gtop: 100;
+
+//////////
+// PADDINGS
+//////////
+
+// Padding TOP XS
+$padding-top: 0;
+// Padding TOP MD
+$padding-top-md: 0;
+// Padding BOTTOM XS
+$padding-bottom: 0;
+// Padding BOTTOM MD
+$padding-bottom-md: 0;
+
+//////////
+// GAPS & GRIDS
+//////////
+
+// GAP XS
+$gap_xs : 0;
+// GAP SM
+$gap_sm : 0;
+// GAP MD
+$gap_md : 0 25;
+
+// GRID XS
+$cols_xs : 0 6 7 8 9 10 11 12;
+// GRID SM
+$cols_sm : 0;
+// GRID MD
+$cols_md : 0 3 4 5 6 7 8 9 10 11 12;
+
+
+// SOURCE
+// https://gist.github.com/jareware/4738651 
+// 
+
+///////////
+// DISPLAY
+///////////
+
+// "class name" values
+$display:	"dblock" block, 
+			"diblock" inline-block,
+			"dflex" flex, 
+			"diflex" inline-flex, 
+			"dnone" none;
+
+
+///////////
+// ALIGN
+///////////
+
+// properties "class name" values
+$align: text-align "tc" center,  
+		text-align "tr" right, 
+		align-items "ai" center;
+
+		
+// boxes
+$box: "450" 450px, 
+		"20per" 20%, 
+		"30" 30px;
+
+@each $b in $box {
+	.box-#{nth($b, 1)} {
+		max-width: nth($b, 2);
+	}
+}

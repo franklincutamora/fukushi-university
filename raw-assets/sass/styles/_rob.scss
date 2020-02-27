@@ -1,0 +1,1017 @@
+// Global CSS
+// Rob Padding Top
+.rob-padding-t{
+    padding-top: 100px;
+    // padding-bottom: 100px;
+    @include mq(max, $mq_md - 1){
+        padding-top: 60px;
+        // padding-bottom: 60px;
+    }
+}
+
+.rob-padding-tb{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    &.shutsuganshorui-pdng140 {
+        padding-bottom:140px;
+
+        @include mq(max, $mq_md - 1){
+            padding-bottom: 60px;
+        }
+    }
+    @include mq(max, $mq_md - 1){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+// Rob Description
+.rob-desc{
+    font-family: "Noto Sans CJK JP",sans-serif;
+    font-weight: 400;
+    $min_width: 320px;
+    $max_width: 1640px;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 20px;
+
+    // Modifications Css
+    &.p-properties {
+        padding-left: 1.5em;
+        text-indent: -1.5em;
+        display: block;
+        margin-bottom: 10px;
+        font-weight:300;
+    }
+    &.fweight300 {
+        font-weight:300;
+    }
+    &.mtp12 {
+        margin-top:-12px;
+        @include mq(max, $mq_md - 1){
+            margin-top:0;
+        }
+    }
+    &.mbtm10 {
+        margin-bottom: 10px;
+        display: inline-block;
+        position: relative;
+    }
+
+    &.nlspacing {
+        letter-spacing:-0.5px;
+    }
+    &.nlspacing7 {
+        letter-spacing:-0.7px;
+    }
+    &.lheight28 {
+        line-height:28px;
+    }
+    &.lheight30 {
+        line-height:30px;
+    }
+    &.fsize14 {
+        font-size: 14px;
+        line-height: 28px;
+        margin-top:-10px;
+        margin-bottom:30px;
+    }
+    &.brdrbtm1 {
+        border-bottom:1px solid #CFCFD0;
+    }
+    &.margintp10 {
+        margin-top: 10px;
+    }
+    &.margintp15 {
+        margin-top: 15px;
+    }
+     &.margintp17 {
+        margin-top: 17px;
+    }
+    &.marginbtm5 {
+        margin-bottom: 5px;
+    }
+    &.marginbtm10 {
+        margin-bottom: 10px;
+    }
+    &.marginbtm15 {
+        margin-bottom: 15px;
+    }
+    &.imp_marginbtm10 {
+        margin-bottom: 10px !important;
+    }
+    &.marginbtm25 {
+        margin-bottom: 25px;
+    }
+    &.marginbtm30 {
+        margin-bottom: 30px;
+    }
+    &.marginbtm {
+        margin-bottom:45px;
+    }
+    &.marginbtm35 {
+        margin-bottom:35px;
+    }
+    &.marginbtm75 {
+        margin-bottom:75px;
+    }
+    // End Modifications Css
+    small{
+        font-size: 12px;
+        line-height: 24px;
+        &.lspacing-neg {
+            letter-spacing: -1px;
+        }
+        &.indents {
+            padding-left: 1.5em;
+            text-indent: -1.5em;
+            display: block;
+        }
+
+        &.dispblock {
+            display: block;
+        }
+    }
+
+    .big{
+        font-family: "Century Gothic";
+        font-size: 21px;
+        font-weight: 400;
+    }
+    .strong{
+        font-weight: 400;
+        &.letter-spacing {
+            letter-spacing:-0.2px;
+        }
+    }
+    
+    a{
+        color: #414042;
+    }
+    &-stud{
+        $min_font: 14px;
+        $max_font: 16px;
+        @include fluid-type($min_width, $max_width, $min_font, $max_font);
+        $min_font_lh: 28px;
+        $max_font_lh: 38px;
+        @include fluid-type-lh($min_width, $max_width, $min_font_lh, $max_font_lh);
+    }
+    &-card{
+        font-size: 14px;
+        margin-bottom: 50px;
+
+        &.mrgnbtm30 {
+            margin-bottom:30px;
+        }
+    }
+    &-plain{
+        margin-bottom: 0px;
+        font-size:16px;
+    }
+    &-uline{
+        border-bottom: 1px solid #414042;
+    }
+}
+
+// MB Box
+.rob-mb-box{
+    margin-bottom: 80px;
+    border-bottom: 2px solid #FF8282;
+    padding-bottom: 60px;
+    &.marginbtm75 {
+        margin-bottom:75px;
+    }
+
+    @include mq(max, $mq_md - 1){
+        margin-bottom: 60px;
+    }
+    &:last-child{
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border: 0;
+    }
+}
+
+// Rob Accordion
+.rob-accordion-section{
+    .rob-accordion-box{
+        margin-bottom: 10px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        .rob-accordion-header{
+            position: relative;
+            .rob-accordion-btn{
+                background-color: #B3B3B3;
+                color: #fff;
+                font-family: "Noto Sans CJK JP",sans-serif;
+                font-weight: 200;
+                font-size: 16px;
+                padding: 12px;
+                font-weight: 100;
+                line-height: 26px;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                transition: all 0.5s ease-in-out;
+                @include mq(max, 768){
+                    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (768 - 320)));
+                    padding: 12px 50px 12px 12px;
+                }
+
+                i{
+                    position: absolute;
+                    right: 12px;
+                    transform: rotate(90deg);
+                    transition: .4s ease-in-out;
+                }
+            }
+            &.is-active{
+                .rob-accordion-btn{
+                    background-color: $theme-color;
+                    i{
+                        transform: rotate(270deg);
+                    }
+                }
+            }
+        }
+        .rob-accordion-body{
+            margin-top: 20px;
+            margin-bottom: 30px;
+            .rob-dashed{
+                display: inline-block;
+                border-top: 1px dashed #414042;
+                max-width: 110px;
+                margin-top: 20px;
+                margin-bottom: 15px;
+                width: 100%;
+            }
+            .rob-desc{
+                margin-bottom: 0;
+                a{
+                    color: #414042;
+                }
+            }
+        }
+    }
+}
+
+
+// END Global CSS
+
+// Jukensei
+.rob-all-stud{
+    background-image: url("../img/jukensei/bg/img_jukensei01.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include mq(max, 1000){
+        background-position: 70% 50%;
+    }
+    @include mq(max, $mq_md - 1){
+        background-position: top  center;
+        background-image: url("../img/jukensei/bg/img_jukensei02.jpg");
+        padding-bottom: 40px;
+        padding-top: 370px;
+    }
+    .rob-stud-wrp{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .rob-stud-box{
+            background-color: #fff;
+            border-radius: 50px;
+            padding: 75px 70px;
+            max-width: 560px;
+            width: 100%;
+            @include mq(max, $mq_md - 1){
+                padding: 50px 25px;
+                max-width: 100%;
+            }
+            @include mq(max, 375){
+                border-radius:20px;
+                padding: 50px 25px 95px;
+            }
+            .rob-desc{
+                margin-bottom: 0;
+                font-family: 'Yumincho', serif;
+                font-weight: 400;
+            }
+        }
+    }
+    &.shakaijin{
+        background-image: url("../img/shakaijin/img_shakaijin01.jpg");
+        @include mq(max, 1000){
+            background-position: 40% 50%;
+        }
+        @include mq(max, $mq_md - 1){
+            background-position: 20% 50%;
+        }
+        @include mq(max, 375){
+            background-position: unset;
+            background-image: url("../img/shakaijin/sp_img_shakaijin01.png");
+            
+        }
+    }
+    &.hogosha{
+        background-image: url("../img/hogosha/hog_bg.jpg");
+    }
+}
+
+.rob-educ-activ{
+    border-bottom: 1px solid #cacaca;
+    padding-top: 90px;
+    padding-bottom: 100px;
+    position: relative;
+    &.noborder {
+        border:0;
+    }
+    &.pdngbtm120 {
+        padding-bottom:120px;
+        @include mq(max, $mq_md - 1){
+            padding-bottom: 50px;
+        }
+        @include mq(max, 375){
+            padding-bottom: 60px;
+        }
+    }
+    @include mq(max, 980){
+        .xs-12{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    
+    @include mq(max, $mq_md - 1){
+        padding-bottom: 50px;
+    }
+    &::before{
+        content: url('../img/jukensei/bg/img_jukensei06.png');
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+        @include mq(max, $mq_md - 1){
+            bottom: 0;
+        }
+    }
+    &::after{
+        content: "";
+        background: url('../img/jukensei/bg/img_jukensei05.png') no-repeat;
+        position: absolute;
+        top: -40px;
+        right: 0;
+        width: 85%;
+        max-width: 400px;
+        height: 100%;
+        @include mq(max, 1280){
+            right: -100px;
+        }
+        @include mq(max, 850){
+            right: 0;
+        }
+        @include mq(max, $mq_md - 1){
+            top: 0;
+            max-width: 250px;
+        }
+    }
+    .rob-card{
+        height: 600px;
+        z-index: 1;
+        @include mq(max, 980){
+            height: auto;
+            margin-bottom: 30px;
+        }
+        .rob-card-body{
+            height: 100%;
+            position: relative;
+            .rob-btn{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                @include mq(max, 980){
+                    margin-top: 50px;
+                    position: relative;
+                }
+            }
+        }
+    }
+    &.shakaijin-sec2{
+        &::before, &::after{
+            display: none;
+        }
+        .rob-card{
+            // height: 700px;
+
+            &.height605px {
+                height: 605px;
+                @include mq(max, $mq_md - 1){
+                    height: auto;
+                }
+            }
+            @include mq(max, $mq_md - 1){
+                margin-bottom: 0;
+                height: auto;
+            }
+        }
+        .rob-btn{
+            margin-top: 40px;
+            @include mq(max, $mq_md - 1){
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.rob-senior-stud{
+    .rob-title{
+        @include mq(max, $mq_md - 1){
+            margin-bottom: 180px;
+        }
+    }
+}
+
+.rob-events-app{
+    border-top: 1px solid #cacaca;
+    background-color: #F4F7F5;
+    padding-top: 110px;
+    padding-bottom: 115px;
+    position: relative;
+    @include mq(max, $mq_md - 1){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+// Jukensei Gakuhi
+.gakuhi{
+    .rob-mb-box{
+        border: 0;
+        .rob-table{
+            tbody{
+                th{
+                    background-color: #ECECEC;
+                    color: #414042;
+                    font-weight: 400;
+                }
+            }
+        }
+        .rob-list-box{
+            margin-bottom: 10px;
+        }
+    }
+    .rob-accordion-section{
+        .rob-accordion-box{
+            .rob-accordion-body{
+                .rob-list-box{
+                    border: 0;
+                    padding: 0;
+                    margin-bottom: 0;
+                    li{
+                        margin-bottom: 15px;
+                        .rob-list-tit{
+                            font-size: 14px;
+                            font-weight: 300;
+                            &::before{
+                                background-color: #414042;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Jukensei Shutsuganhoho
+.shutsuganhoho{
+    .rob-list-box{
+        padding: 0;
+        border: 0;
+        li{
+            margin-bottom: 15px;
+            .rob-list-tit{
+                font-size: 14px;
+                &::before{
+                    background-color: #414042;
+                }
+            }
+        }
+    }
+    .rob-table{
+        margin-bottom: 20px;
+    }
+}
+
+// Jukensei AO
+.ao{
+    .rob-mb-box{
+        border: 0;
+    }
+    .rob-list-box{
+        padding: 0;
+        border: 0;
+        margin-bottom: 40px;
+
+        li{
+            margin-bottom: 15px;
+            .rob-list-tit{
+                font-size: 14px;
+                &::before{
+                    background-color: #414042;
+                }
+            }
+            .rob-desc{
+                a{
+                    text-decoration: underline;
+                }
+            }
+            &.lheight30 {
+                line-height:30px;
+            }
+        }
+    }
+}
+
+// Jukensei Gakuhimennjo
+.gakuhimennjo{
+    .rob-mb-box{
+        border: 0;
+    }
+    .rob-table{
+        margin-bottom: 40px;
+    }
+    .rob-desc-uline{
+        margin-bottom: 15px;
+
+        &.fsize16 {
+            font-size:16px;
+        }
+    }
+    .rob-list-box{
+        border: 0;
+        padding: 0;
+        margin-bottom: 40px;
+        @include mq(max, $mq_md - 1){
+            margin-bottom: 20px;
+        }
+        li{
+            margin-bottom: 10px;
+            line-height:30px;
+
+            &.fonties {
+                font-family: "Noto Sans CJK JP",sans-serif;
+                font-size:14px;
+                font-weight:300;
+            }
+            .rob-list-tit{
+                font-size: 14px;
+                &::before{
+                    background-color: #414042;
+                }
+                &-uline{
+                    border-bottom: 1px solid #414042;
+                    margin-bottom: 12px;
+                }
+            }
+        }
+        &.rob-list-boxv2{
+            border: 1px solid #D9D9D9;
+            padding: 30px 30px;
+        }
+    }
+}
+
+// Jukensei Heigan
+.heigan{
+    .rob-mb-box{
+        border: 0;
+    }
+    .rob-list-box{
+        margin-bottom: 30px;
+    }
+    .rob-table{
+        th{
+            text-align: left;
+            small{
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+// Jukensei Shutsuganshorui
+.shutsuganshorui{
+    .rob-mb-box{
+        border: 0;
+    }
+    .rob-list-box{
+        padding: 0;
+        border: 0;
+        li{
+            .rob-list-tit{
+                font-size: 14px;
+                &::before{
+                    background-color: #414042;
+                }
+            }
+        }
+    }
+}
+
+// Hogosha
+.hogosha-sec2{
+    border: 0;
+    &::before, &::after{
+        display: none;
+    }
+    .rob-card{
+        padding: 0;
+        height: auto;
+        .rob-card-head{
+            position: relative;
+            .rob-card-img{
+                display: flex;
+                align-items: center;
+                img{
+                    width: 100%;
+                }
+            }
+            .rob-car-flow-text{
+                position: absolute;
+                background-color: #FFF000;
+                writing-mode: vertical-rl;
+                top: 45px;
+                right: 50px;
+                font-size: 17px;
+                font-family: "Noto Sans CJK JP",sans-serif;
+                font-weight: 300;
+                padding: 12px 2px;
+                @include mq(max, 560){
+                    font-size: 10px;
+                    top: 15px;
+                    right: 20px;
+                    padding: 5px 2px;
+                }
+                @include mq(max, 375){
+                    top: 0;
+                }
+            }
+        }
+        .rob-card-body{
+            padding-top: 35px;
+            padding-left: 60px;
+            padding-right: 60px;
+            padding-bottom: 70px;
+            @include mq(max, $mq_md - 1){
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-bottom: 35px;
+            }
+            .rob-card-tit{
+                margin-bottom: 25px;
+            }
+            .rob-desc-card{
+                margin-bottom: 35px;
+            }
+            .rob-btn{
+                position: relative;
+            }
+        }
+    }
+}
+
+// Shikaku Page
+.rob_shi_btm_box{
+    .shi-box-1{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        h2{
+            $max_width: 1640px;
+            $min_width: 320px;
+            $max_font: 32px;
+            $min_font: 24px;
+            @include fluid-type($min_width, $max_width, $min_font, $max_font);
+            $max_font_lh: 46px;
+            $min_font_lh: 34px;
+            @include fluid-type-lh($min_width, $max_width, $min_font_lh, $max_font_lh);
+            font-family: "Yumincho DB",serif;
+            margin-bottom: 40px;
+            text-align: center;
+            flex: 0 0 100%;
+            max-width: 100%;
+            @include mq(max, 768){
+                margin-bottom: 20px;
+            }
+        }
+        .shi-box-1-i{
+            flex: 0 0 50%;
+            max-width: 50%;
+            @include mq(max, 768){
+                flex: 0 0 100%;
+                max-width: 100%;
+                padding: 0 15px;
+            }
+            .list{
+                padding-right: 65px;
+                @include mq(max, 768){
+                    padding-right: 0;
+                    margin-bottom: 20px;
+                }
+                p{
+                    font-family: 'Noto Sans JP', sans-serif;
+                    font-size: 14px;
+                    line-height: 28px;
+                    font-weight: 300;
+                }
+            }
+            .ph{
+                display: flex;
+                align-items: center;
+            }
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &.rob_shi_btm_box_v2{
+        .shi-box-1{
+            flex-direction: row-reverse;
+            .shi-box-1-i{
+                .list{
+                    padding-left: 65px;
+                    padding-right: 0;
+                    @include mq(max, 768){
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Connect Data Css
+.shikaku-connect{
+    margin-bottom: 50px;
+
+    .shu-box-2-l-ii  {
+        .text {
+            font-size: 370%;
+        }
+    }
+    #shu-box-3-cross {
+        padding-top:190px;
+        &.icon_cross_adjust {
+            img {
+                padding-top:0;
+            }
+        }
+    }
+    #shu-box-4-i {
+        .shu-box-4-ii {
+            h3 {
+                font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+                font-weight: bold;
+            }
+            p {
+                font-size:14px;
+            }
+        }
+    }
+
+    #shu-box-5 {
+        .list-i {
+            li {
+                font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+            }
+        }
+    }
+
+    .h4bold {
+        font-weight:bold;
+    }
+    .fbold {
+        h3 {
+            font-weight:bold;
+        }
+    }
+    .shi_title_section{
+        padding-bottom: 60px;
+    }
+    .ffamily-hiragino {
+        font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    }
+    .shushoku-bg {
+        background-color:#FAF9EC;
+    }
+    .shikaku_sec_output{
+        .shi-box-1{
+            flex-direction: row-reverse;
+        }
+    }
+    .shi-box-1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &.mb{
+            margin-bottom: 140px;
+        }
+        h2{
+            margin-bottom: 34px;
+            color: #011321;
+            font-size: 214%;
+            line-height: 1.2;
+            text-align: center;
+            flex: 0 0 100%;
+            max-width: 100%;
+            font-weight: bold;
+        }
+        .shi-box-1-i{
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 40px;
+            @include mq(max, 768){
+                flex: 0 0 100%;
+                max-width: 100%;
+                padding: 0;
+            }
+            .ph{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                img{
+                    @include mq(max, 1018){
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .list{
+            padding: 0;
+            font-size: 114%;
+            line-height: 1.7;
+            @include mq(max, 768){
+                margin-bottom: 30px;
+            }
+        }
+    }
+    #shu-box-4-i{
+        margin: 0;
+        .shu-box-4-ii{
+            h3{
+                padding-left: 0;
+            }
+        }
+    }
+    #shu-box-1-l{
+        max-width: 520px;
+        width: 100%;
+        margin: auto;
+        h2{
+            img{
+                @include mq(max, 768){
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    #shu-box-1-r{
+        max-width: 386px;
+        width: 100%;
+        margin: auto;
+    }
+    #shu-chart1{
+        @include mq(max, 768){
+            height: 100%;
+        }
+    }
+    #shu-chart3, #shu-chart4, #shu-chart2{
+        @include mq(max, 768){
+            height: 100%;
+        }
+    }
+    #shu-box-2-l{
+        h2{
+            img{
+                @include mq(max, 768){
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    #shu-box-4{
+        h2{
+            img{
+                @include mq(max, 768){
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    #shu-box-5{
+        h2{
+            img{
+                @include mq(max, 768){
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.connecting-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px #1F9985 solid;
+    margin-bottom: 34px;
+    li{
+        flex-basis: 0;
+        flex-grow: 1;
+        &:last-child{
+            a{
+                background-color: #ededed;
+                color: #000;
+            }
+        }
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1F9985;
+            padding: 16px 0;
+            color: #fff;
+            font-size: 171%;
+            line-height: 1.2;
+            font-weight: bold;;
+            @include mq(max, 768){
+                font-size: 16px;
+            }
+            @include mq(max, 375){
+                font-size: 14px;
+            }
+        }
+    }
+    &-v2{
+        border-bottom: 5px #52B527 solid;
+        li{
+            &:first-child{
+                a{
+                    background-color: #ededed;
+                    color: #000;
+                }
+            }
+            &:last-child{
+                a{
+                    background-color: #52B527;
+                    color: #fff;
+                }
+            }
+            a{
+                background-color: #52B527;
+            }
+        }
+    }
+}
+
+.nv-icon{
+    font-family: 'Material Icons';
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'liga';
+    word-wrap: normal;
+    white-space: nowrap;
+    text-transform: none;
+    letter-spacing: normal;
+    display: inline-block;
+}
+
+// Boshu Page
+.boshu_page{
+    .rob-mb-box{
+        border: 0;
+    }
+}
+
+// Gakuhisupport Page
+.gakuhisupport{
+    .rob-mb-box{
+        border: 0;
+    }
+}
+#anch_link{
+    padding-top: 10px;
+    margin-top: -10px;
+}

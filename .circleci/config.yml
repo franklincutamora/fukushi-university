@@ -1,0 +1,25 @@
+version: 2
+jobs:
+    build and test:
+        docker:
+            - image: circleci/node:10.16.0
+        steps:
+            - checkout
+            - run: npm install
+            - run: npm install htmlhint
+            - run: ./node_modules/.bin/htmlhint
+            - run: npm install eslint
+            - run: ./node_modules/.bin/eslint assets/js/**.js
+            - run: npm install stylelint
+            - run: ./node_modules/.bin/stylelint assets/css/**.css
+            - run: mkdir -p my_workspace
+            - run: echo "Trying out workspaces" > my_workspace/echo-output
+            - persist_to_workspace:
+                root: my_workspace
+                paths:
+                    - echo-output
+workflows:
+    version: 2
+    running_job:
+        jobs:
+        - build and test

@@ -1,0 +1,41 @@
+/*! fis-animate version.1.0 | 
+	(Author) Filjumar Jumamoy 
+	(Author LinkedIn) https://www.linkedin.com/in/filjumar-jumamoy-26243182/ 
+
+	You can contribute to the plugin by sending me some feedbacks or suggestions @ https://www.linkedin.com/in/filjumar-jumamoy-26243182/ 
+
+*/
+
+<------- HOW TO USE -------->
+
+> Add Class fis-animate to specific element you want to animate
+
+> Add data-fis attribute with specific fis options like : 
+	>> fade-up, 
+	>> fade-up-left,
+	>> fade-up-right,
+	>> fade-down, 
+	>> fade-down-left,
+	>> fade-down-right,
+	>> fade-left,
+	>> fade-right,
+	>> flip-x,
+	>> flip-y,
+	>> zoom-in,
+	>> zoom-in-up,
+	>> zoom-in-down,
+	>> zoom-in-left,
+	>> zoom-in-right,
+	>> zoom-out,
+	>> default or empty ( fade-in effect )
+
+> Add data-fis-duration attribute with specific fis-duration value :
+	>> Default Value: .3s
+
+!IMPORTANT
+	> Make parent overflow: hidden when using to avoid scroll visibility on document.
+
+<----------------- SAMPLE USAGE ------------------>
+<div style="overflow: hidden">
+<div class="test fis-animate" data-fis="fade-down" data-fis-duration=".5">The Contents</div>
+</div>

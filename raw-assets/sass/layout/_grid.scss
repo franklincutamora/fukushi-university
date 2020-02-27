@@ -1,0 +1,124 @@
+.gap {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	
+	/*gaps*/
+	/*
+	*
+	* How to use gap classes :
+	*
+	*  Ex: <div class="gap gap-2 gap-0-xs">
+	*			<div class="md-6 xs-12"></div>
+	*			<div class="md-6 xs-12"></div>
+	*		</div>
+	*
+	*/
+
+	/********/
+	/* EXTRA SMALL DEVICES */
+	/********/
+
+	@each $current-gap_xs in $gap_xs {
+		$i: index($gap_xs, $current-gap_xs);
+		&.gap-#{nth($gap_xs, $i)}-xs { 
+	        margin-left: -$current-gap_xs+px;
+	        margin-right: -$current-gap_xs+px;
+	        > [class^="xs"] {
+				padding-left: $current-gap_xs+px;
+				padding-right: $current-gap_xs+px;
+			}
+			> [class*=" xs"] {
+				padding-left: $current-gap_xs+px;
+				padding-right: $current-gap_xs+px;
+			}
+	    }
+	}
+
+	/********/
+	/* SMALL DEVICES */
+	/********/
+
+	@include mq(min, $mq_sm) {
+		@each $current-gap_sm in $gap_sm {
+			$i: index($gap_sm, $current-gap_sm);
+	    	&.gap-#{nth($gap_sm, $i)}-sm { 
+		        margin-left: -$current-gap_sm+px;
+		        margin-right: -$current-gap_sm+px;
+		        > [class^="sm"] {
+					padding-left: $current-gap_sm+px;
+					padding-right: $current-gap_sm+px;
+				}
+				> [class*=" sm"] {
+					padding-left: $current-gap_sm+px;
+					padding-right: $current-gap_sm+px;
+				}
+		    }
+	    }
+	}
+
+	/********/
+	/* MEDIUM DEVICES */
+	/********/
+
+	@include mq(min, $mq_md) {
+		@each $current-gap_md in $gap_md {
+			$i: index($gap_md, $current-gap_md);
+	    	&.gap-#{nth($gap_md, $i)} { 
+		        margin-left: -$current-gap_md+px;
+		        margin-right: -$current-gap_md+px;
+		        > [class^="md"] {
+					padding-left: $current-gap_md+px;
+					padding-right: $current-gap_md+px;
+				}
+				> [class*=" md"] {
+					padding-left: $current-gap_md+px;
+					padding-right: $current-gap_md+px;
+				}
+		    }
+	    }
+	}
+
+	/********/
+	/* EXTRA SMALL DEVICES */
+	/********/
+
+	@each $current-cols_xs in $cols_xs {
+		$i: index($cols_xs, $current-cols_xs);
+		$val : percentage(nth($cols_xs, $i) / 12);
+		
+		.xs-#{nth($cols_xs, $i)} { 
+			flex: 0 0 $val;
+        	max-width: $val;
+	    }
+	}
+
+	/********/
+	/* SMALL DEVICES */
+	/********/
+	@include mq(min, $mq_sm) {
+		@each $current-cols_sm in $cols_sm {
+			$i: index($cols_sm, $current-cols_sm);
+			$val : percentage(nth($cols_sm, $i) / 12);
+			.sm-#{nth($cols_sm, $i)} { 
+				flex: 0 0 $val;
+				max-width: $val;
+			}
+		}
+	}
+
+	/********/
+	/* MEDIUM DEVICES */
+	/********/
+
+	@include mq(min, $mq_md) {
+		@each $current-cols_md in $cols_md {
+			$i: index($cols_md, $current-cols_md);
+			$val : percentage(nth($cols_md, $i) / 12);
+	    	.md-#{nth($cols_md, $i)} { 
+	        	flex: 0 0 $val;
+        		max-width: $val;
+		    }
+	    }
+	}
+}

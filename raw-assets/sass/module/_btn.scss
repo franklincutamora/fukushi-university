@@ -1,0 +1,111 @@
+.btn {
+	position: relative;
+	text-decoration: none;
+	color: $base-color;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 300;
+	&.common-btn {
+		display: inline-block;
+		background-color: $theme-color;
+		color: white;
+		max-width: 300px;
+		width: 100%;
+		text-align: center;
+		margin: auto;
+		padding: 13.5px 20px;
+		margin-top: 30px;
+		margin-bottom: 16px;
+		border: 1px solid transparent;
+		transition: linear .2s;
+		@include mq(max, $mq_md - 1) {
+			font-size: 14px;
+			padding: 13.5px 15px;
+		}
+		@include forIE() {
+			padding-top: 20px;
+		}
+		&:hover {
+			background-color: white;
+			color: $theme-color;
+			border-color: $theme-color;
+			transition: linear .2s;
+		}
+		&.is-white {
+			background-color: white;
+			color: $base-color;
+		}
+		&.green {
+			border: 1px solid #52c481!important;
+			&:hover {
+				background: white !important;
+				color: #52c481 !important;
+			}
+		}
+		&.b_green {
+			border: 1px solid #39c9c8!important;
+			&:hover {
+				background: white !important;
+				color: #39c9c8 !important;
+			}
+		}
+		&.no-icon {
+			span {
+				padding-left: 0;
+			}
+		}
+		&.is-full {
+			display: block;
+			max-width: 100%;
+		}
+		span {
+			position: relative;
+			padding-left: 30px;
+			i {
+				position: absolute;
+				left: 0;
+				top: -4px;
+				font-size: 24px;
+			}
+		}
+		&.ftr-btn_v2 {
+			background-color: white;
+			border: 3px solid $theme-color;
+			text-align: center;
+			font-size: 16px;
+			padding-top: 22px!important;
+			padding-bottom: 23px!important;
+			margin: 0;
+			max-width: 100%;
+			margin-bottom: 20px;
+			@include mq(max, $mq_md - 1) {
+				padding-top: 26px!important;
+				padding-bottom: 26px!important;
+			}
+			&:hover {
+				background-color: $theme-color;
+				color: white!important;
+				transition: linear .2s;
+				span {
+					i {
+						color: white;
+					}
+				}
+			}
+			span {
+				display: block;
+				padding-right: 40px!important;
+				i {
+					left: 95%;
+					top: 50%!important;
+					transform: translateY(-50%);
+					font-size: 18px!important;
+					color: $theme-color;
+				}
+			}
+		}
+		&.fs-18 {
+		font-size: 18px;
+		}
+	}
+}
+

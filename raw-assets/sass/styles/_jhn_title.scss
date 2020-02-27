@@ -1,0 +1,39 @@
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+.jhn_title_wrp {
+    background: #fff;
+    text-align: center;
+    padding: 105px 0 60px;
+
+    @include mq(max, 768) {
+        padding: 90px 0 40px;
+    }
+    
+}
+.jhn_title {
+    font-size: 32px;
+    line-height: 46px;
+    font-family: "Yumincho DB", serif;
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+    position: relative;
+    @include mq(max, $mq_sm){
+        font-size: 24px;
+        padding-bottom: 5px;
+    }
+    &::before {
+        content: "";
+        width: 48px;
+        height: 4px;
+        background: #ff8282;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: auto;
+        bottom: 0;
+    }
+}
+

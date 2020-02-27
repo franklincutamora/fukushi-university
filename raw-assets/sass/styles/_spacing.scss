@@ -1,0 +1,95 @@
+.mlr-auto {
+	margin-left: auto!important;
+	margin-right: auto!important;
+}
+.global-mt {
+	margin-top: $gtop+px;
+}
+
+/** MARGIN TOP **/
+
+/** SP **/
+@each $current-mt in $margin-top {
+	$i: index($margin-top, $current-mt);
+	.mt-#{nth($margin-top, $i)}-xs { 
+		margin-top: $current-mt + px;
+	}
+}
+
+/** PC **/
+@include mq(min, $mq_md) {
+	@each $current-mt in $margin-top-md {
+		$i: index($margin-top-md, $current-mt);
+		.mt-#{nth($margin-top-md, $i)} { 
+			margin-top: $current-mt + px!important;
+		}
+	}
+}
+/** END MARGIN TOP **/
+
+
+/** MARGIN BOTTOM **/
+
+/** SP **/
+@each $current-mb in $margin-bottom {
+	$i: index($margin-bottom, $current-mb);
+	.mb-#{nth($margin-bottom, $i)}-xs { 
+		margin-bottom: $current-mb + px !important;
+	}
+}
+
+/** PC **/
+@include mq(min, $mq_md) {
+	@each $current-mb in $margin-bottom-md {
+		$i: index($margin-bottom-md, $current-mb);
+		.mb-#{nth($margin-bottom-md, $i)} { 
+			margin-bottom: $current-mb + px!important;
+		}
+	}
+}
+/** END MARGIN BOTTOM **/
+
+
+
+/** PADDING TOP **/
+
+/** SP **/
+@each $current-pt in $padding-top {
+	$i: index($padding-top, $current-pt);
+	.pt-#{nth($padding-top, $i)}-xs { 
+		padding-top: $current-pt + px;
+	}
+}
+
+/** PC **/
+@include mq(min, $mq_md) {
+	@each $current-pt in $padding-top-md {
+		$i: index($padding-top-md, $current-pt);
+		.pt-#{nth($padding-top-md, $i)} { 
+			padding-top: $current-pt + px!important;
+		}
+	}
+}
+/** END PADDING TOP **/
+
+
+/** PADDING BOTTOM **/
+
+/** SP **/
+@each $current-pb in $padding-bottom {
+	$i: index($padding-bottom, $current-pb);
+	.pb-#{nth($padding-bottom, $i)}-xs { 
+		margin-bottom: $current-pb + px;
+	}
+}
+
+/** PC **/
+@include mq(min, $mq_md) {
+	@each $current-pb in $padding-bottom-md {
+		$i: index($padding-bottom-md, $current-pb);
+		.pb-#{nth($padding-bottom-md, $i)} { 
+			margin-bottom: $current-pb + px!important;
+		}
+	}
+}
+/** END MARGIN BOTTOM **/

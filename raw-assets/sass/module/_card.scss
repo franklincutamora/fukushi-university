@@ -1,0 +1,408 @@
+.card {
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	.card-head, .card-body, .card-foot {
+		@include flex_w(100%);
+	}
+	.card-head {
+		.card-title {
+			padding: 30px 0 0 0;
+			font-size: 1.5em;
+		}
+	}
+	.card-body, .card-foot {
+		position: relative;
+		padding: 30px 0 0 0;
+	}
+}
+
+.cards_b {
+	margin-top: 50px;
+}
+.btn-card_nav {
+	display: block;
+	position: relative;
+	padding: 30px;
+	font-family: "Noto Sans JP", sans-serif;
+	color: $base-color;
+	// background-image: url("../img/card-web-bg.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	&.img_b-web, &.img_b-ecology {
+		// background-image: url("../img/card-web-bg.png");
+		.img_b {
+			text-align: center;
+			img {
+				max-width: 126px;
+			}
+		}
+		&:hover {
+			color: $theme-color;
+			transition: linear .2s;
+		}
+	}
+	&.btn-card_ico {
+		background-image: none;
+		background-color: #F4F7F5;
+		$min_width: 600px;
+		$max_width: 1640px;
+		$min_font: 14px;
+		$max_font: 18px;
+		@include fluid-type($min_width, $max_width, $min_font, $max_font);
+		padding: 50px 50px;
+		margin-bottom: 15px;
+		@include mq(min, 1000) {
+			padding: 38px 50px;
+		}
+		@include mq(max, $mq_md - 1) {
+			font-size: 16px;
+			padding: 27.5px 30px;
+		}
+		&:hover {
+			color: $theme-color;
+			transition: linear .2s;
+		}
+		span {
+			display: block;
+			position: relative;
+			padding-right: 25px;
+			i {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				@include mq(max, $mq_md - 1) {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	&.btn-card_ico.ico_l {
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-right: 0;
+			i {
+				position: relative;
+				top: unset;
+				font-size: 39px;
+				color: #39C9C7;
+				transform: translateY(0);
+				padding-right: 10px;
+				@include forIE() {
+					margin-top: -8px;
+				}
+				@include mq(max, $mq_md - 1) {
+					font-size: 29px;
+				}
+			}
+		}
+	}
+	.img_t {
+		font-family: "游明朝", sans-serif;
+		font-weight: 500;
+		$min_width: 320px;
+		$max_width: 1640px;
+		$min_font: 14px;
+		$max_font: 16px;
+		@include fluid-type($min_width, $max_width, $min_font, $max_font);
+	}
+}
+
+.jEvent-card {
+	position: relative;
+	text-decoration: none;
+	color: $base-color;
+	.jEvent-card_img {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.jEvent-ico {
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: white;
+			&:before {
+				content: "";
+				position: absolute;
+				border-left: 68px solid $theme-color;
+				border-bottom: 68px solid transparent;
+			}
+			i {
+				position: absolute;
+				font-size: 20px;
+				z-index: 1;
+				left: 14px;
+				top: 10px;
+			}
+		}
+	}
+	
+	&.no-icon {
+		.jEvent-ico {
+			display: none;
+		}		
+	} 
+	.jEvent-card_cont {
+		padding: 20px;
+		font-family: 'Noto Sans JP', sans-serif;
+		text-align: left;
+		font-size: 16px;
+		$min-vw: 768px;
+		$max-vw: 999px;
+		$min-font-size: 10px;
+		$max-font-size: 16px;
+		@include fluid-type($min-vw, $max-vw , $min-font-size , $max-font-size);
+		@include mq(min, 1000) {
+			font-size: 12px;
+		}
+		@include mq(min, 1280) {
+			font-size: 11px;
+		}
+		@include mq(min, 1480) {
+			font-size: 12px;
+		}
+		@include mq(min, 1640) {
+			font-size: 14px;
+		}
+		.m-tit {
+			font-size: 16px;
+		}
+		.ftr-cont {
+			position: relative;
+			color: #6EB6C1;
+			padding-left: 20px;
+			margin-top: 5px;
+			@include mq(max, $mq_md - 1) {
+				padding-left: 25px;
+			}
+			@include mq(max, 375) {
+				padding-left: 30px;
+			}
+			span {
+				position: absolute;
+			}
+			.yr {
+				left: 0;
+				top: 0;
+				transform: rotate(-90deg) translateX(-30%) translateY(-30%);
+			}
+			.m_d {
+				position: relative;
+				$min-vw: 768px;
+				$max-vw: 999px;
+				$min-font-size: 45px;
+				$max-font-size: 58px;
+				@include fluid-type($min-vw, $max-vw , $min-font-size , $max-font-size);
+				@include fluid-type-lh($min-vw, $max-vw , $min-font-size - 8px , $max-font-size - 8px);
+				@include mq(min, 1000) {
+					font-size: 28px;
+					line-height: 28px;
+				}
+				@include mq(min, 1280) {
+					font-size: 28px;
+					line-height: 29px;
+				}
+				@include mq(min, 1480) {
+					font-size: 35px;
+					line-height: 35px;
+				}
+				@include mq(min, 1640) {
+					font-size: 40px;
+					line-height: 40px;
+				}
+			}
+			.m_d-v2 {
+				right: 0;
+				top: 0;
+			}
+			.t_sched {
+				top: 20px;
+				right: 0;
+				@include mq(max, $mq_md - 1) {
+					top: 25px;
+				}
+			}
+			.sch {
+				display: block;
+				position: relative;
+				left: -18px;
+				padding-left: 20px;
+				margin-top: 5px;
+				@include mq(max, $mq_md - 1) {
+					padding-left: 28px;
+					margin-top: 0;
+					left: -25px;
+				}
+				i {
+					position: absolute;
+					left: 0;
+					top: 0;
+					font-size: 17px;
+					@include mq(max, $mq_md - 1) {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.cjhs-card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	&.has_img-bg {
+		height: 100%;
+		.cjhs-card_body {
+			// background-image: url("../img/exp-img.jpg");
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 100%;
+			@include mq(max, 1000) {
+				min-height: 350px;
+			}
+		}
+	}
+	.cjhs-card_body {
+		display: flex;
+		align-items: center;
+		flex: 0 0 100%;
+		max-width: 100%;
+		text-align: center;
+		@include mq(max, 460) {
+			min-height: 320px!important;
+		}
+		.cjhs-btns {
+			position: absolute;
+			bottom: 10px;
+			left: 10px;
+			right: 10px;
+			
+			&.sam30 {
+				bottom: 30px;
+				left: 30px;
+				right: 30px;
+				@include mq(max, 1024){
+					bottom: calc(10px + (30 - 10) * ((100vw - 769px) / (1024 - 769)));
+					left: calc(10px + (30 - 10) * ((100vw - 769px) / (1024 - 769)));
+					right: calc(10px + (30 - 10) * ((100vw - 769px) / (1024 - 769)));
+				}
+				@include mq(max, 768){
+					bottom: calc(10px + (30 - 10) * ((100vw - 415px) / (768 - 415)));
+					left: calc(10px + (30 - 10) * ((100vw - 415px) / (768 - 415)));
+					right: calc(10px + (30 - 10) * ((100vw - 415px) / (768 - 415)));
+				}
+				@include mq(max, 414){
+					bottom: 5px;
+					left: 5px;
+					right: 5px;
+				}
+			}
+						
+			.uni-title {
+				display: block;
+				text-align: left;
+				$min-vw: 320px;
+				$max-vw: 1640px;
+				$min-font-size: 34px;
+				$max-font-size: 66px;
+				@include fluid-type($min-vw, $max-vw , $min-font-size , $max-font-size);
+				@include fluid-type-lh($min-vw, $max-vw , $min-font-size , $max-font-size );
+				margin-bottom: 15px;
+			}
+			.card-tit {
+				font-family: "Yumincho";
+				font-weight: 500;
+				color: white;
+				$min-vw: 560px;
+				$max-vw: 1640px;
+				$min-font-size: 32px;
+				$max-font-size: 82px;
+				@include fluid-type($min-vw, $max-vw , $min-font-size , $max-font-size);
+				@include fluid-type-lh($min-vw, $max-vw , $min-font-size - 14px , $max-font-size - 30px);
+			}
+			.btn {
+				padding: 22px 20px;
+				padding-right: 40px;
+				margin-top: 0;
+				&.ysdbtn {
+					padding: 35px 40px 35px 35px;
+					text-align: left;
+					@include mq(max,480){
+						padding: 22px 20px;
+					}
+					@include mq(max, 1024){
+						padding: 22px 30px 22px 22px;
+						text-align: left;
+					}
+					@include mq(max, 900){
+						padding: 22px 30px 22px 15px;
+					}
+					@include mq(max, 414){
+						padding: 22px 18px 22px 5px;
+					}
+				}
+				@include mq(max, $mq_md - 1) {
+					padding: 10px 20px;
+					padding-right: 25px;
+					font-size: 12px;
+				}
+				@include mq(max, 320) {
+					padding: 10px 15px;
+					padding-right: 20px;
+					font-size: 10px;
+				}
+				span {
+					display: block;
+					position: relative;
+					padding-left: 0;
+					font-weight: 400;
+					font-size: 20px;
+					i {
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						left: 100%;
+						transition: linear .2s;
+						@include mq(max, $mq_md - 1) {
+							font-size: 18px;
+						}
+					}
+					@include mq(max, 1640){
+						font-size: calc(12px + (20 - 12) * ((100vw - 1024px) / (1640 - 1024)));
+					}
+					@include mq(max, 1024){
+						font-size: 11px;
+					}
+					@include mq(max, 768){
+						font-size: calc(12px + (20 - 12) * ((100vw - 375px) / (768 - 375)));
+					}
+					@include mq(max, 320){
+						font-size: 11px;
+					}
+					
+				}
+				&:hover {
+					span {
+						i {
+							left: 102%;
+							transition: linear .2s;
+						}
+					}
+				}
+				&.is-white {
+					&:hover {
+						background-color: #FBFF78;
+						border-color: #FBFF78;
+					}
+				}
+			}
+		}
+	}
+}

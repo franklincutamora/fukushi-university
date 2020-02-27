@@ -1,0 +1,44 @@
+// Rob Card
+.rob-card{
+    background-color: #F4F7F5;
+    border-radius: 50px;
+    padding: 60px 60px;
+    position: relative;
+    &.addtnal-padding {
+        padding: 50px 60px;
+        @include mq(max, 768){
+            padding: 50px 10px;
+        }
+    }
+    @include mq(max, $mq_md - 1){
+        border-radius: 25px;
+        padding: 35px 15px;
+        margin-bottom: 30px;
+    }
+    .rob-card-body{
+        .rob-card-tit{
+            $min_width: 320px;
+            $max_width: 1640px;
+            $min_font: 16px;
+            $max_font: 24px;
+            @include fluid-type($min_width, $max_width, $min_font, $max_font);
+            font-family: "Noto Sans CJK JP",sans-serif;
+            font-weight: 400;
+            margin-bottom: 20px;
+            text-align: center;
+
+            @include mq(max, 375){
+                font-size: calc(18px + (14 - 18) * ((100vw - 320px) / (768 - 320)));;
+            }
+        }
+        .rob-card-img{
+            text-align: center;
+            img{
+                // max-width: 407px;
+                // width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+

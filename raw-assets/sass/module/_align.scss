@@ -1,0 +1,5 @@
+@each $a in $align {
+	.#{nth($a, 2)} {
+		#{nth($a, 1)}: nth($a, 3);
+	}
+}

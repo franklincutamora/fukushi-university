@@ -1,0 +1,126 @@
+
+//////////////
+// FONT FAMILY
+//////////////
+
+@font-face {
+    font-family: 'Yumincho';
+    src: url('fonts/yumin.woff'); /* IE9 Compat Modes */
+    src: url('fonts/yumin.woff?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('fonts/yumin.woff') format('woff'), /* Pretty Modern Browsers */
+    url('fonts/yumin.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Yumincho DB';
+    src: url('fonts/YuMincho-Demibold.woff2') format('woff2'),
+        url('fonts/YuMincho-Demibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eisley Claise';
+    src: url('fonts/EisleyClaise.woff2') format('woff2'),
+        url('fonts/EisleyClaise.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tuesday Night';
+    src: url('fonts/TuesdayNight-Regular.woff2') format('woff2'),
+        url('fonts/TuesdayNight-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.yumin{
+    font-family: "Yumincho" !important;
+}
+.yumin_db{
+    font-family: "Yumincho DB" !important;
+}
+.tuesday_night{
+    font-family: "Tuesday Night" !important;
+}
+
+$notosans: "Noto Sans CJK JP", sans-serif;
+$ec: 'Eisley Claise',serif;
+
+
+
+// FS OPTION (em,px)
+$default-fs-option: 'px';
+
+$font-sizes-xs: 18;
+$font-sizes: 16 18 20;
+
+//////////////
+// FONT WEIGHTS
+//////////////
+
+$font-weights: 500 600 900;
+
+//////////
+// Colors
+//////////
+
+$primary-color: rgb(175, 175, 202);
+$secondary-color: rgb(153, 17, 17);
+$theme-color: #FF8282;
+
+//////////////
+// Containers
+//////////////
+
+$default-container: 1280;
+$mq_sm: 561;
+$mq_md: 769;
+
+//////////////
+// Padding left & right
+//////////////
+
+$default-pl: 30;
+
+//////////
+// MARGINS
+//////////
+
+// Margin TOP XS
+$margin-top: 0;
+// Margin TOP MD
+$margin-top-md: 0;
+// Margin BOTTOM XS
+$margin-bottom: 0 10 20 30 40 45 60 70;   
+// Margin BOTTOM MD
+$margin-bottom-md: 0 20 30 40 45 50 60 70;
+
+// global margin top
+$gtop: 100;
+
+//////////
+// PADDINGS
+//////////
+
+// Padding TOP XS
+$padding-top: 0;
+// Padding TOP MD
+$padding-top-md: 0;
+// Padding BOTTOM XS
+$padding-bottom: 0;
+// Padding BOTTOM MD
+$padding-bottom-md: 0;
+
+//////////
+// GAPS & GRIDS
+//////////
+
+// GAP XS
+$gap_xs : 0 4 5 10 20 30 40 50;
+// GAP SM
+$gap_sm : 0 4 5 10 20 25 30 40 50;
+// GAP MD
+$gap_md : 0 4 5 10 13 15 20 23 25 30 35 40 50;
+

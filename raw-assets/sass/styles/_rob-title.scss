@@ -1,0 +1,207 @@
+// Rob Title
+.rob-title{
+    $min_width: 320px;
+    $max_width: 1640px;
+    $min_font: 20px;
+    $max_font: 32px;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+    $min_font_lh: 32px;
+    $max_font_lh: 46px;
+    @include fluid-type-lh($min_width, $max_width, $min_font_lh, $max_font_lh);
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    font-family: 'Yumincho', serif;
+    @include mq(max, 375){ 
+        font-size:24px;
+        margin-bottom: 53px;
+
+        &.mbtm30 {
+            margin-bottom:30px;
+        }
+    }
+    @include mq(max, 320){ 
+        font-size:20px;
+    }
+
+    &.mrginbtm70 {
+        margin-bottom:70px;
+        @include mq(max, $mq_md - 1){
+            margin-bottom:180px;
+        }
+        @include mq(max, 375){
+            margin-bottom:275px;
+            letter-spacing:0;
+        }
+    }
+    span{
+        display: inline-block;
+        position: relative;
+        font-family: 'Yumincho', serif;
+        font-weight: 600;
+        span {
+            &.lspacing0 {
+                letter-spacing:0;
+                font-family: "Noto Sans CJK JP",sans-serif;
+            }
+        
+        }
+        &.fweight600 {
+            font-weight:600;
+        }
+        &.content-titles {
+            font-size: 24px;
+            font-weight: 500;
+            font-family: "Noto Sans CJK JP",sans-serif;
+
+            
+        }
+    }
+    &-stud{
+        color: $other-theme-color;
+        text-shadow: 0 0 #FF4F4F;
+        $min_font: 14px;
+        $max_font: 29px;
+        @include fluid-type($min_width, $max_width, $min_font, $max_font);
+        $min_font_lh: 24px;
+        $max_font_lh: 46px;
+        @include fluid-type-lh($min_width, $max_width, $min_font_lh, $max_font_lh);
+        font-weight: 300;
+        letter-spacing: 0;
+        margin-bottom: 10px;
+        text-align: left;
+
+        &.fyumin {
+            font-family: ‘YuMincho’, serif;
+            @include mq(max, 375){ 
+                font-size:calc(20px + (14 - 20) * ((100vw - 320px) / (768 - 320)));
+                margin-bottom:17px;
+            }
+        }
+    }
+    &-tag{
+        color: $theme-color;
+        $min_font: 14px;
+        $max_font: 18px;
+        @include fluid-type($min_width, $max_width, $min_font, $max_font);
+        $min_font_lh: 14px;
+        $max_font_lh: 18px;
+        @include fluid-type-lh($min_width, $max_width, $min_font_lh, $max_font_lh);
+ 
+        margin-bottom: 20px;
+        span{
+            padding: 0 15px;
+            font-family: 'Noto Sans CJK JP', sans-serif;
+            font-weight: 400;
+            &::before{
+                content: "";
+                background-color: $theme-color;
+                position: absolute;
+                left: 0;
+                top: -5px;
+                height: 25px;
+                width: 1px;
+                transform: rotate(-25deg);
+            }
+            &::after{
+                content: "";
+                background-color: $theme-color;
+                position: absolute;
+                right: 0;
+                top: -5px;
+                height: 25px;
+                width: 1px;
+                transform: rotate(25deg);
+            }
+        }
+    }
+    &-uline{
+        $min_font: 24px;
+        $max_font: 34px;
+        @include fluid-type($min_width, $max_width, $min_font, $max_font);
+        padding-bottom: 25px;
+        font-family: 'YuMincho', serif;
+        margin-bottom: 80px;
+        font-weight: 600;
+        letter-spacing: 7px;
+        &.marginbtm48 {
+            margin-bottom:48px;
+        }
+        &::before{
+            content: "";
+            background-color: $theme-color;
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+    }
+    &-lline{
+        $min_font: 20px;
+        $max_font: 24px;
+        @include fluid-type($min_width, $max_width, $min_font, $max_font);
+        $min_font_lh: 28px;
+        $max_font_lh: 23px;
+        @include fluid-type-lh($min_width, $max_width, $min_font_lh, $max_font_lh, );
+        @include mq(max, 1640){ //Modifications 12-11-19
+            border-left: 8.5px solid #FF8282;
+        }
+        font-family: "Noto Sans CJK JP",sans-serif;
+        font-weight: 400;
+        text-align: left;
+        margin-bottom: 22px;
+        line-height: 24px;
+        padding-left: 15px;
+        border-left: 8.5px solid $theme-color;
+        display: flex;
+        align-items: center;
+        &.isOrange{
+            border-left: 7px solid #FBB167;
+        }
+        &.isBlue{
+            border-left: 7px solid #63CED6;
+        }
+        &.isGreen{
+            border-left: 7px solid #9BD46C;
+        }
+        &.marginbtm10 {
+            margin-bottom: 10px;
+        }
+        small{
+            font-size: 14px;
+            display: inline-block;
+            margin-left: 8px;
+        }
+    }
+    &-bg{
+        background-color: #F5F5F5;
+        font-family: "Noto Sans CJK JP",sans-serif;
+        font-weight: 300;
+        $min_font: 16px;
+        $max_font: 18px;
+        @include fluid-type($min_width, $max_width, $min_font, $max_font);
+        text-align: left;
+        padding: 3px 15px;
+        margin-bottom: 15px;
+        
+        span {
+            font-family: "Noto Sans CJK JP",sans-serif;
+        }
+        &.marginbtm10 {
+            margin-bottom: 10px;
+        }
+        &.marginbtm20 {
+            margin-bottom: 20px;
+        }
+        &.margintp20 {
+            margin-top: 20px;
+        }
+    }
+}
+

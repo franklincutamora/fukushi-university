@@ -1,0 +1,5 @@
+@each $d in $display {
+	.#{nth($d, 1)} {
+		display: nth($d, 2);
+	}
+}

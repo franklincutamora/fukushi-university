@@ -1,0 +1,50 @@
+// Rob Button
+.rob-btn{
+    background-color: $theme-color;
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    font-family: "Noto Sans CJK JP",sans-serif;
+    font-weight: 300;
+    max-width: 100%;
+    text-align: center;
+    padding: 17px 20px;
+    position: relative;
+    width: 100%;
+    @include mq(max, $mq_md - 1){
+        font-size: 14px;
+    }
+    i{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transition: .4s ease-in-out;
+        &.fsize24 {
+            font-size:24px;
+            @include mq(max, 375){
+                font-size:18px;
+            }
+        }
+    }
+    &.adjstmnt_btn {
+        font-size:22px;
+        padding:35px 20px;
+
+        @include mq(max, 768){
+            font-size:calc(14px + (18 - 14) * ((100vw - 320px) / (768 - 320)));
+            padding: 23px 20px;
+        }
+    }
+    &:hover{
+        i{
+            right: 25px;
+        }
+    }
+    &-dark{
+        background-color: #414042;
+    }
+}

@@ -1,0 +1,42 @@
+//////////////
+// FONT SIZES
+//////////////
+
+@each $current-fs in $font-sizes-xs{
+	$i: index($font-sizes-xs, $current-fs);
+	.fs-#{nth($font-sizes-xs, $i)}-xs { 
+		@if $default-fs-option == 'px' {
+			font-size: $current-fs + px;
+		} @else if $default-fs-option == 'pt' {
+			font-size: $current-fs + pt;
+		} @else if $default-fs-option == 'em' {
+			font-size: ($current-fs / $base-font-size) +em;
+		}
+	}
+}
+
+@include mq(min, $mq_md) {
+	@each $current-fs in $font-sizes {
+		$i: index($font-sizes, $current-fs);
+		.fs-#{nth($font-sizes, $i)} { 
+			@if $default-fs-option == 'px' {
+				font-size: $current-fs + px!important;
+			} @else if $default-fs-option == 'pt' {
+				font-size: $current-fs + pt!important;
+			} @else if $default-fs-option == 'em' {
+				font-size: ($current-fs / $base-font-size) +em!important;
+			}
+		}
+	}
+}
+
+//////////////
+// FONT WEIGHTS
+//////////////
+
+@each $current-fw in $font-weights{
+	$i: index($font-weights, $current-fw);
+	.fw-#{nth($font-weights, $i)} { 
+		font-weight: $current-fw!important;
+	}
+}
